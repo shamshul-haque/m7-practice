@@ -21,11 +21,10 @@ function App() {
       <Todo isDone={false} />
       <Actor name="Bapparaj" />
       {actors.map((actor) => (
-        <Actor name={actor} />
+        <Actor name={actor} key={actor} />
       ))}
-      {/* <Singer name="ranu mondol" age={30} /> */}
       {singers.map((singer) => (
-        <Singer singer={singer} />
+        <Singer singer={singer} key={singer.id} />
       ))}
     </>
   );
