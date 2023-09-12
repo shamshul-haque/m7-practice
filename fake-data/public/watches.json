@@ -1,0 +1,28 @@
+[
+    {
+      "id": 6,
+      "name": "Audemars Piguet",
+      "price": 12000
+    },
+    {
+      "id": 7,
+      "name": "Citizen",
+      "price": 300
+    },
+    {
+      "id": 8,
+      "name": "Fossil",
+      "price": 200
+    },
+    {
+      "id": 9,
+      "name": "Casio",
+      "price": 100
+    },
+    {
+      "id": 10,
+      "name": "Bulova",
+      "price": 250
+    }
+  ]
+  
