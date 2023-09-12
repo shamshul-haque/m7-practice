@@ -1,7 +1,6 @@
 import React from "react";
 
-const Bottle = ({ bottle }) => {
-  console.log(bottle);
+const Bottle = ({ bottle, handleAddToCart }) => {
   const { name, img, price } = bottle;
   return (
     <div
@@ -10,18 +9,20 @@ const Bottle = ({ bottle }) => {
         padding: "15px",
         margin: "15px",
         borderRadius: "15px",
+        textAlign: "center",
       }}
     >
       <h3>Name: {name}</h3>
-      <p>Price: {price}</p>
       <img
         src={img}
         alt={name}
         style={{
           height: "200px",
-          objectFit: "fill",
+          borderRadius: "15px",
         }}
       />
+      <p>Price: {price}</p>
+      <button onClick={() => handleAddToCart(bottle)}>Add to Cart</button>
     </div>
   );
 };
