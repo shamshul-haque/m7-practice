@@ -6,8 +6,9 @@ function App() {
     <>
       <h1>Load Fake Data of Watch</h1>
       <Watches />
-      <Bottles />
+
       <h1>Load Fake Data of Watch</h1>
+      <Bottles />
     </>
   );
 }

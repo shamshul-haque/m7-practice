@@ -31,7 +31,7 @@ const Watches = () => {
     },
   ]; */
 
-  // json way to load data
+  // load data in a json way
   const [watches, setWatches] = useState([]);
   useEffect(() => {
     const loadData = async () => {
