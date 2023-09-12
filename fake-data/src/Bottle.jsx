@@ -22,7 +22,7 @@ const Bottle = ({ bottle, handleAddToCart }) => {
         }}
       />
       <p>Price: {price}</p>
-      <button onClick={() => handleAddToCart(bottle)}>Add to Cart</button>
+      <button onClick={() => handleAddToCart(bottle)}>Add</button>
     </div>
   );
 };

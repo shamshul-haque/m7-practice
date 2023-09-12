@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Bottle from "./Bottle";
 import Cart from "./Cart";
-import { addToLocalStorage, getFromLocalStorage } from "./localStorage";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+  removeFromLocalStorage,
+} from "./localStorage";
 
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
@@ -34,6 +38,12 @@ const Bottles = () => {
     addToLocalStorage(bottle.id);
   };
 
+  const handleRemoveFromCart = (id) => {
+    const remainingCart = cart.filter((bottle) => bottle.id !== id);
+    setCart(remainingCart);
+    removeFromLocalStorage(id);
+  };
+
   const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
@@ -42,7 +52,7 @@ const Bottles = () => {
 
   return (
     <div>
-      <Cart cart={cart} />
+      <Cart cart={cart} handleRemoveFromCart={handleRemoveFromCart} />
       <div style={styles}>
         {bottles.map((bottle) => (
           <Bottle

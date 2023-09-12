@@ -14,4 +14,10 @@ const getFromLocalStorage = () => {
   return cartString ? JSON.parse(cartString) : [];
 };
 
-export { addToLocalStorage, getFromLocalStorage };
+const removeFromLocalStorage = (id) => {
+  const cart = getFromLocalStorage();
+  const remaining = cart.filter((cartId) => cartId !== id);
+  saveToLocalStorage(remaining);
+};
+
+export { addToLocalStorage, getFromLocalStorage, removeFromLocalStorage };
