@@ -1,4 +1,3 @@
-import Bottles from "./Bottles";
 import Watches from "./Watches";
 
 function App() {
@@ -6,9 +5,6 @@ function App() {
     <>
       <h1>Load Fake Data of Watch</h1>
       <Watches />
-
-      <h1>Load Fake Data of Watch</h1>
-      <Bottles />
     </>
   );
 }
